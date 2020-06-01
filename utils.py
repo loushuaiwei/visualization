@@ -12,7 +12,7 @@ def get_conn():
     conn = pymysql.connect(host='localhost',
                            port=3306,
                            user='root',
-                           password='16479X',
+                           password='cmy1998',
                            db='phone',
                            charset='utf8')
     # 创建游标，默认是元组型

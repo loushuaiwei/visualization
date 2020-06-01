@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/static/images/BTBJ.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/DQLOGO.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/ZTBJ.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/bg06.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/bj1.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/data.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/header-left.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/header-right.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/home.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/loading.gif" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/login.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/mima.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/one.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/panel-c-b.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/panel-l-b.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/panel-l-t.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/panel-r-b.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/panel-r-m.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/panel-r-t.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/panel.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/thumb.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/title-bg-long.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/title-bg.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/images/yonghu.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/js/echarts.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/js/jquery-1.2.6.pack.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/theme" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/testView.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/爬虫/process_data/data/comment.csv" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

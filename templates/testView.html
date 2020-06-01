@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+<div id="container" style="width: 600px; height:400px; margin: 0 auto;top: 100px"></div>
+    <script src="{{ url_for('static',filename='js/jquery-1.2.6.pack.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/echarts.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/china.js') }}"></script>
+ <script src="{{ url_for('static',filename='theme/dark.js') }}"></script>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            type: 'post',
+            url: '/query',
+            dataType: 'json',
+            success: function (returnData) {
+                console.log(returnData);
+                if (returnData.status == 1) {
+                    option = {
+                        title: {
+                            text: '大数据行业地点与薪资关系',
+                            subtext: '地图展示',
+                            left: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: function (params) {
+                                var res = params.name + '<br/>';
+                                var myseries = option.series;
+                                for (var i = 0; i < myseries.length; i++) {
+                                    for (var j = 0; j < myseries[i].data.length; j++) {
+                                        if (myseries[i].data[j].name == params.name) {
+                                            res += myseries[i].name + ' : ' + myseries[i].data[j].value + '</br>';
+                                        }
+                                    }
+                                }
+                                return res;
+                            }
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'left',
+                            data: ['最大薪资(k)', '最低薪资(k)', '平均薪资(k)', '总职位数(个)']
+                        },
+                        visualMap: {
+                            min: 0,
+                            max: 200,
+                            left: 'left',
+                            top: 'bottom',
+                            text: ['高', '低'],           // 文本，默认为数值文本
+                            calculable: true
+                        },
+                        toolbox: {
+                            show: true,
+                            orient: 'vertical',
+                            left: 'right',
+                            top: 'center',
+                            feature: {
+                                dataView: {readOnly: false},
+                                restore: {},
+                                saveAsImage: {}
+                            }
+                        },
+
+                        series: [
+                            {
+                                name: '最大薪资(k)',
+                                type: 'map',
+                                mapType: 'china',
+                                roam: false,
+                                tooltip: {
+                                    show: true
+                                },
+                                label: {
+                                    normal: {
+                                        show: true
+                                    },
+                                    emphasis: {
+                                        show: true
+                                    }
+                                },
+                                data: returnData.max_salary
+                            },
+                            {
+                                name: '最低薪资(k)',
+                                type: 'map',
+                                mapType: 'china',
+                                tooltip: {
+                                    show: true
+                                },
+                                label: {
+                                    normal: {
+                                        show: true
+                                    },
+                                    emphasis: {
+                                        show: true
+                                    }
+                                },
+                                data: returnData.min_salary
+
+                            },
+                            {
+                                name: '平均薪资(k)',
+                                type: 'map',
+                                mapType: 'china',
+                                tooltip: {
+                                    show: true
+                                },
+                                label: {
+                                    normal: {
+                                        show: true
+                                    },
+                                    emphasis: {
+                                        show: true
+                                    }
+                                },
+                                data: returnData.avg_salary
+                            },
+                            {
+                                name: '总职位数(个)',
+                                type: 'map',
+                                mapType: 'china',
+                                tooltip: {
+                                    show: true
+                                },
+                                label: {
+                                    normal: {
+                                        show: true
+                                    },
+                                    emphasis: {
+                                        show: true
+                                    }
+                                },
+                                data: returnData.count_job
+                            }
+                        ]
+                    };
+                }
+                var dom = document.getElementById("container");
+                var myChart = echarts.init(dom,);
+                myChart.setOption(option);
+            }
+        })
+    });
+</script>
+
+</body>
+
+</html>

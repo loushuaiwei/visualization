@@ -126,88 +126,6 @@ function echarts_2() {
         // 基于准备好的dom，初始化echarts实例
         var myChart2 = echarts.init(document.getElementById('echart2'),'infographic');
 
-/*option = {
-    tooltip: {
-        trigger: 'item',
-        formatter: "{a} <br/>{b}: {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        x: 'left',
-        data:['18-30','31-40','41-50','51-60','65岁以上','未标明'],
-        textStyle: {color: '#fff'}
-    },
-    series: [
-        {
-            name:'违法犯罪人员年龄分布',
-            type:'pie',
-            radius: ['30%', '55%'],
-            avoidLabelOverlap: false,
-            label: {
-                normal: {
-                    show: false,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '20',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            data:[
-                {value:335, name:'18-30'},
-                {value:310, name:'31-40'},
-                {value:234, name:'41-50'},
-                {value:135, name:'51-60'},
-                {value:135, name:'65岁以上'},
-                {value:1548, name:'未标明'}
-            ]
-        }
-    ]
-};*/
-/*option = {
-
-        legend: {
-            x : 'center',
-            y : 'bottom',
-            itemWidth: 8,
-            itemHeight: 8,
-            textStyle:{//图例文字的样式
-                color:'#fff',
-                fontSize:12
-            },
-            data:['上限','上上限','下限','下下限','正跳变','负跳变']
-        },
-        calculable : true,
-        series : [
-            {
-                name:'面积模式',
-                type:'pie',
-                radius : [30, 100],
-                center : ['50%', '45%'],
-                roseType : 'area',
-                data:[
-                    {value:8, name:'0-1000',itemStyle:{normal:{color:'#ff7800'}}},
-                    {value:9, name:'1000-2000',itemStyle:{normal:{color:'#23eb6a'}}},
-                    {value:10, name:'2000-3000',itemStyle:{normal:{color:'#7627cb'}}},
-                    {value:11, name:'3000-4000',itemStyle:{normal:{color:'#fffc00'}}},
-                    {value:12, name:'4000-5000',itemStyle:{normal:{color:'#46afdb'}}},
-                    {value:12, name:'5000-？',itemStyle:{normal:{color:'#ff0000'}}}
-                ]
-            }
-        ]
-    }
-     if (option && typeof option === "object") {
-         // 使用刚指定的配置项和数据显示图表。
-         myChart.setOption(option);
-     }*/
 option2 = {
     xAxis: {
         type: 'category',
@@ -246,7 +164,7 @@ option2 = {
         symbol: 'triangle',
         symbolSize: 10,
         lineStyle: {
-            color: 'green',
+            color: 'orange',
             width: 2,
             type: 'dashed'
         },
